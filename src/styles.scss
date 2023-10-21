@@ -1,0 +1,17 @@
+html,
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+app-root {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+
+@import './app/app.component.scss';
+@import './app/sky-background/sky-background.component.scss';

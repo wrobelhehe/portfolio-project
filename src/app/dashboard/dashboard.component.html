@@ -1,1 +1,12 @@
-<p>dashboard works!</p>
+<div class="dashboard-wrapper">
+    <div class="dashboard-bgc box-shadow">
+        <div class="about border-radius box-shadow">
+            <img class="border-radius" src="../../assets/img/preview12.png" alt="">
+        </div>
+        <div *ngFor="let preview of previews; let i = index" class="preview-element border-radius box-shadow">
+
+            <img class="border-radius" [src]="preview.imageUrl" alt="">
+            <div class="overlay-text">Twój tekst tutaj</div>
+        </div>
+    </div>
+</div>

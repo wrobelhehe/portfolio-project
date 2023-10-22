@@ -25,7 +25,9 @@ import { DashboardComponent } from '../dashboard/dashboard.component';
     MainPageRoutingModule,
     NgScrollbarModule,
     NgxSpinnerModule,
-    MaterialModule
+    MaterialModule,
+
+
 
   ],
 })

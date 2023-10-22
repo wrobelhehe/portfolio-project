@@ -1,0 +1,17 @@
+.content-overlay {
+    position: relative;
+    z-index: 1;
+
+    .text {
+        height: 300px;
+    }
+}
+
+ng-scrollbar {
+    z-index: 20;
+    --scrollbar-size: 8px;
+    --scrollbar-thumb-color: white;
+    --scrollbar-hover-size: 12px;
+    --scrollbar-track-color: rgba(0, 0, 0, 0.05);
+    --scrollbar-border-radius: 10px;
+}

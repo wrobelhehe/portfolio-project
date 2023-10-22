@@ -1,0 +1,10 @@
+app-sky-background {
+    display: block;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgb(2, 0, 20) 52%, rgba(0, 0, 0, 1) 100%, rgba(0, 32, 16, 1) 100%);
+}

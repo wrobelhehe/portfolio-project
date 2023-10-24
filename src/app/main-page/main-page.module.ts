@@ -9,15 +9,16 @@ import { SkyBackgroundComponent } from './sky-background/sky-background.componen
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { MaterialModule } from '../material/material.module';
 import { DashboardComponent } from '../dashboard/dashboard.component';
-
-
+import { DialogComponent } from '../dialog/dialog.component';
 
 @NgModule({
   declarations: [
     MainComponent,
     SkyBackgroundComponent,
     NavigationComponent,
-    DashboardComponent
+    DashboardComponent,
+    DialogComponent,
+
 
   ],
   imports: [
@@ -26,6 +27,8 @@ import { DashboardComponent } from '../dashboard/dashboard.component';
     NgScrollbarModule,
     NgxSpinnerModule,
     MaterialModule,
+
+
 
 
 

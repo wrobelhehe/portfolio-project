@@ -1,5 +1,8 @@
 .navigation-wrapper {
 
+    box-shadow: 2px 10px 10px -10px rgba(66, 68, 90, 1);
+    height: 8vh;
+
     mat-icon {
         cursor: pointer;
     }
@@ -16,10 +19,16 @@
         justify-content: center;
         align-items: center;
         width: 50px;
+        transform: scale(1);
+        transition: transform 0.3s ease-in-out;
 
         img {
             width: 100%;
         }
+    }
+
+    .logo-wrapper:hover {
+        transform: scale(1.2);
     }
 
     .desktop-nav {
@@ -42,8 +51,12 @@
     }
 }
 
-@media (max-width: 1024px) {
+.bgc-color-black {
+    background-color: rgba(0, 0, 0, 0.9);
 
+}
+
+@media (max-width: 1024px) {
 
     .navigation-wrapper {
 
@@ -61,12 +74,13 @@
 
             .mobile-nav-elements {
                 margin: 0;
+                padding-left: 10vw;
                 width: 100vw;
                 position: absolute;
-                top: 0;
+                top: 9%;
                 left: 0;
                 z-index: 100;
-                background-color: rgba(2, 0, 20, 0.9);
+                background-color: rgba(0, 0, 0, 0.9);
                 width: 100%;
                 height: 100%;
                 overflow: overlay;
@@ -82,6 +96,14 @@
                     font-size: 2rem;
                     margin-bottom: 1.2rem;
                     font-weight: 500;
+                    letter-spacing: 2px;
+                    transform: scale(1);
+                    transition: transform 0.3s ease-in-out;
+                }
+
+                .mobile-nav-element:hover {
+                    transform: scale(1.2);
+
                 }
             }
 

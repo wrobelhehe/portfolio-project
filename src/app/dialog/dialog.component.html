@@ -1,0 +1,33 @@
+<div class="dialog-wrapper">
+    <div class="mac-buttons">
+        <span class="close-btn" (click)="closeDialog()"></span>
+        <span class="minimize-btn" (click)="closeDialog()"></span>
+        <span class="maximize-btn" (click)="closeDialog()"></span>
+    </div>
+
+    <div class="column-sections">
+        <div class="left-section">
+            <img [src]="preview.projectImageUrl" alt="">
+        </div>
+        <div class="right-section">
+            <h2>{{preview.header}}</h2>
+            <h1>{{preview.header2}}</h1>
+            <h3>{{preview.header3}}</h3>
+            <p class="white-space-pre">{{preview.description}}</p>
+
+            <div class="buttons-section">
+                <button class="custom-button" *ngFor="let button of preview.buttons" (click)="openInNewTab(button.url)">
+                    <div class="icon-wrapper">
+
+                        <img [src]="button.img" alt="Ikona">
+                    </div>
+                    <span>{{button.title}}</span>
+                </button>
+            </div>
+
+
+
+        </div>
+    </div>
+
+</div>

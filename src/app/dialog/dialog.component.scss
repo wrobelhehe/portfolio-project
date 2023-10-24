@@ -1,0 +1,277 @@
+.dialog-wrapper {
+    background-color: #00000b;
+    display: grid;
+    place-items: center;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 1fr;
+    position: relative;
+}
+
+.mac-buttons {
+    display: flex;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.mac-buttons>span {
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.close-btn {
+    background-color: #662623;
+}
+
+.minimize-btn {
+    background-color: #b18423;
+}
+
+.maximize-btn {
+    background-color: #1a7928;
+}
+
+.mac-buttons>span:hover {
+    opacity: 0.7;
+}
+
+.mac-buttons>span:active {
+    opacity: 0.5;
+}
+
+.close-btn:hover {
+    background-color: #7a3430;
+}
+
+.close-btn:active {
+    background-color: #55191b;
+}
+
+.minimize-btn:hover {
+    background-color: #d19c30;
+}
+
+.minimize-btn:active {
+    background-color: #8e6c18;
+}
+
+.maximize-btn:hover {
+    background-color: #2aab3a;
+}
+
+.maximize-btn:active {
+    background-color: #127021;
+}
+
+
+.column-sections {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+.right-section {
+    padding: 0 20px;
+}
+
+.left-section {
+    border-right: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid white;
+}
+
+.left-section img {
+    width: 100%;
+
+}
+
+.white-space-pre {
+    white-space: pre-line;
+}
+
+.buttons-section {
+
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    padding: 20px 0;
+}
+
+.custom-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    font-weight: 700;
+    color: #00000b;
+    border-radius: 25px;
+    padding: 8px 70px;
+    font-family: 'Comfortaa', sans-serif;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    overflow: hidden;
+    font-size: 16px;
+    border: none;
+    position: relative;
+    outline: none;
+    width: max-content;
+}
+
+.icon-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    transition: all 0.4s ease;
+    z-index: 2;
+}
+
+.custom-button img {
+    height: 24px;
+    width: 24px;
+}
+
+.custom-button span {
+    white-space: nowrap;
+    transform: translateX(150%);
+    transition: all 0.4s ease;
+    opacity: 0;
+    position: absolute;
+    left: calc(100% + 10px);
+    z-index: 1;
+}
+
+.custom-button:hover .icon-wrapper {
+    transform: translateX(-150%);
+}
+
+.custom-button:hover span {
+    transform: translateX(0);
+    opacity: 1;
+    left: calc(30% + 10px);
+}
+
+
+@media (max-width: 1024px) {
+
+    .left-section {
+        border-bottom: 1px solid white;
+        border-right: none;
+
+
+    }
+
+    .left-section img {
+        max-height: 30vh;
+        width: auto;
+    }
+
+    .column-sections {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+        font-size: 90%;
+    }
+
+    .right-section {
+        padding: 0 10px;
+        border-left: none;
+        text-align: center;
+    }
+
+    .mac-buttons>span {
+        width: 18px;
+        height: 18px;
+    }
+
+    .custom-button {
+        padding: 8px 60px;
+        font-size: 14px;
+    }
+
+    .icon-wrapper {
+        width: 35px;
+        height: 35px;
+    }
+
+    .custom-button img {
+        height: 20px;
+        width: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    h1,
+    h2,
+    h3,
+    p {
+        font-size: 80%;
+    }
+
+    .custom-button {
+        padding: 7px 50px;
+        font-size: 12px;
+    }
+
+    .mac-buttons>span {
+        width: 16px;
+        height: 16px;
+    }
+
+    .icon-wrapper {
+        width: 30px;
+        height: 30px;
+    }
+
+    .custom-button img {
+        height: 18px;
+        width: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    h1,
+    h2,
+    h3,
+    p {
+        font-size: 70%;
+    }
+
+    .custom-button {
+        padding: 6px 40px;
+        font-size: 10px;
+    }
+
+    .mac-buttons>span {
+        width: 14px;
+        height: 14px;
+    }
+
+    .icon-wrapper {
+        width: 24px;
+        height: 24px;
+        margin: 0;
+    }
+
+    .custom-button img {
+        height: 16px;
+        width: 16px;
+    }
+}

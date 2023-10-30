@@ -10,19 +10,20 @@ export const MOCK_PREVIEWS: Preview[] = [
         buttons: [{ title: "GitHub", url: "https://github.com/wrobelhehe", img: '../../../assets/icons/github.svg' }, { title: "LinkedIn", url: "https://www.linkedin.com/in/wiktorwrobel/", img: '../../../assets/icons/linkedin.svg' }]
     },
     {
-        imageUrl: '../../../assets/img/preview1.png',
-        header: 'Project 1',
-        header2: "Not ready yet...",
-        projectImageUrl: "../../../assets/img/not-ready.png",
-        description: "",
-        buttons: [{ title: "Source code", url: "https://github.com/wrobelhehe", img: '../../../assets/icons/code-solid.svg' }, { title: "Live demo", url: "#", img: '../../../assets/icons/eye-solid.svg' }]
+        imageUrl: '../../../assets/img/maxyourliftsgenerator.png',
+        header: 'MaxYourLifts',
+        header2: "Generator",
+        projectImageUrl: "../../../assets/img/maxyourliftsPreview.png",
+        description: "MaxYourLifts Pro is an advanced tool tailored for powerlifting enthusiasts who are dedicated to pushing their limits and constantly evolving in their strength journey.\n\nBy incorporating a user-friendly interface, one can seamlessly input personal data and preferences. In return, the system crafts a bespoke training regimen, meticulously designed to match their unique requirements. This not only ensures a safer workout but also optimizes the potential for significant strength gains.\n\nWhether you're a beginner or a seasoned lifter, MaxYourLifts Pro is the companion you need to elevate your lifting game to unprecedented heights."
+        ,
+        buttons: [{ title: "Source code", url: "https://github.com/wrobelhehe/MaxYourLiftsGenerator", img: '../../../assets/icons/code-solid.svg' }, { title: "Live demo", url: "#", img: '../../../assets/icons/eye-solid.svg' }]
     },
     {
-        imageUrl: '../../../assets/img/preview2.png',
-        header: 'Project 2',
-        header2: "Not ready yet...",
+        imageUrl: '../../../assets/img/vanbob.png',
+        header: 'Van Bob',
+        header2: "Hodowla rasowych świnek morskich CH-Teddy",
         projectImageUrl: "../../../assets/img/not-ready.png",
-        description: "",
+        description: "\n\nHodowla zarejestrowana jest pod numerem CCP/212/2016 w Polskim Klubie Rasowych Świnek Morskich – Cavies Club of Poland (CCP), który jako jedyny w Polsce jest członkiem Europejskiego Stowarzyszenia Hodowców Drobiu, Gołębi, Ptaków Ozdobnych, Królików i Świnek Morskich – Entente Européenne (EE).\n\nW hodowli posiadam świnki rasy CH Teddy (Swiss) – szwajcarski teddy, a od 2020 roku również świnki rasy self w umaszczeniu złotym (z różowym okiem, p.e.).\n\nHodowla mieści się w Krakowie.\n",
         buttons: [{ title: "Source code", url: "https://github.com/wrobelhehe", img: '../../../assets/icons/code-solid.svg' }, { title: "Live demo", url: "#", img: '../../../assets/icons/eye-solid.svg' }]
     }, {
         imageUrl: '../../../assets/img/preview3.png',

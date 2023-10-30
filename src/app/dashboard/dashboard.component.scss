@@ -49,15 +49,36 @@ img {
     font-size: 2em;
 }
 
-.preview-element {
+.inner-container {
     position: relative;
+}
+
+.animated {
+    animation-name: fadeInUp;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+.preview-element {
     transition: transform 0.3s ease;
 }
 
 .preview-element:hover {
     transform: scale(1.1);
-    transition: transform 0.3s ease;
     cursor: pointer;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @media (max-width: 1024px) {

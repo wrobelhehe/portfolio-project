@@ -13,7 +13,7 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
         overflow: 'hidden',
       })),
       state('visible', style({
-        height: '30vh', // lub inna wartość, którą chcesz ustawić
+        height: '30vh',
         opacity: '1'
       })),
       transition('hidden <=> visible', [

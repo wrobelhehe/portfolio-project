@@ -7,11 +7,10 @@
     }
 }
 
-ng-scrollbar {
-    z-index: 20;
-    --scrollbar-size: 8px;
-    --scrollbar-thumb-color: white;
-    --scrollbar-hover-size: 12px;
-    --scrollbar-track-color: rgba(0, 0, 0, 0.05);
-    --scrollbar-border-radius: 10px;
+.mid-nav {
+    position: fixed;
+    top: 75vh;
+    left: 2%;
+    z-index: 2;
+    cursor: pointer;
 }

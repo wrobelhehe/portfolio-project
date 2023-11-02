@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { Preview } from '../data/interfaces/preview.model';
-import { MOCK_PREVIEWS } from '../data/mocks/preview.mock';
-import { DialogComponent } from '../dialog/dialog.component';
+import { Preview } from '../../../data/interfaces/preview.model';
+import { MOCK_PREVIEWS } from '../../../data/mocks/preview.mock';
+import { DialogComponent } from '../../../dialog/dialog.component';
 import { MatDialog } from '@angular/material/dialog';
 @Component({
   selector: 'app-dashboard',
@@ -15,16 +15,9 @@ export class DashboardComponent {
 
   getStyles(index: number) {
     const baseStyles: any = {
-      'animation-delay': `${index * 0.15}s`
+      'animation-delay': `${index * 0.1}s`
     };
 
-    if (index === 0) {
-      return {
-        ...baseStyles,
-        'grid-column': '1 / 3',
-        'grid-row': '1 / 3'
-      };
-    }
 
     return baseStyles;
   }

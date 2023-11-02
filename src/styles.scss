@@ -102,6 +102,7 @@ body {
     padding: 0;
     font-family: 'Comfortaa', sans-serif;
     color: white;
+    scroll-behavior: smooth;
 
 }
 
@@ -129,5 +130,15 @@ app-root {
 @import './app/app.component.scss';
 @import './app/main-page/sky-background/sky-background.component.scss';
 @import './app/main-page/main/main.component.scss';
-@import './app/main-page/navigation/navigation.component.scss';
-@import './app/dialog//dialog.component.scss'
+@import './app/main-page/main/navigation/navigation.component.scss';
+@import './app/dialog/dialog.component.scss';
+@import './app/main-page/mid-nav/mid-nav.component.scss';
+@import './app/main-page//main/contact-form/contact-form.component.scss';
+@import './app/main-page/main/dashboard/dashboard.component.scss';
+@import './app/main-page/main/footer/footer.component.scss';
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: white #010001;
+
+}

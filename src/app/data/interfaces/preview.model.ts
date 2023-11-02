@@ -11,5 +11,6 @@ export interface Preview {
     header2?: string;
     header3?: string;
     description?: string;
+    technologies: string[]
     buttons?: Button[]
 }

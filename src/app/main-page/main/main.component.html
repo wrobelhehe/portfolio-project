@@ -1,8 +1,9 @@
 <app-sky-background>
 </app-sky-background>
-<ng-scrollbar>
-    <div class="content-overlay">
-        <app-navigation></app-navigation>
-        <app-dashboard></app-dashboard>
-    </div>
-</ng-scrollbar>
+<div class="content-overlay">
+    <app-navigation></app-navigation>
+    <app-dashboard></app-dashboard>
+    <app-contact-form></app-contact-form>
+    <app-footer></app-footer>
+</div>
+<app-mid-nav [@inOutAnimation] class="mid-nav" (click)="scrollToTop()" *ngIf="scrolled===true"></app-mid-nav>

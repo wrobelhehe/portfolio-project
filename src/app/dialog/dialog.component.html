@@ -14,6 +14,11 @@
             <h1>{{preview.header2}}</h1>
             <h3>{{preview.header3}}</h3>
             <p class="white-space-pre">{{preview.description}}</p>
+            <h2 *ngIf="preview.technologies?.length!==0">Technologies</h2>
+
+            <div class="technologies">
+                <h4 *ngFor="let technology of preview.technologies">{{technology}}</h4>
+            </div>
 
             <div class="buttons-section">
                 <button class="custom-button" *ngFor="let button of preview.buttons" (click)="openInNewTab(button.url)">

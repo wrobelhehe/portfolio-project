@@ -1,5 +1,5 @@
 import { trigger, state, style, transition, animate } from '@angular/animations';
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-navigation',
@@ -25,6 +25,13 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
 export class NavigationComponent {
 
   menuVisible = false;
+
+  get menuClass() {
+    return {
+      'bgc-color-black': this.menuVisible,
+    };
+  }
+
 
   toggleMenu() {
     this.menuVisible = !this.menuVisible;

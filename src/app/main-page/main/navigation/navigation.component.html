@@ -1,16 +1,16 @@
-<div class="navigation-wrapper" [ngClass]="{'bgc-color-black': menuVisible}">
+<div class="navigation-wrapper" [ngClass]="menuClass">
     <div class="logo-wrapper"><a href="#"><img src="../../../assets/img/w-logo.png" alt=""></a></div>
     <div class="desktop-nav">
         <ul class="desktop-nav-elements">
-            <li class="desktop-nav-element"><a href="">Home</a> </li>
-            <li class="mobile-nav-element"> <a href="">My Cv</a> </li>
-            <li class="desktop-nav-element"><a href="">Contact</a></li>
+            <li class="desktop-nav-element"><a href="#home">Home</a> </li>
+            <li class="desktop-nav-element"> <a href="#cv">My Cv</a> </li>
+            <li class="desktop-nav-element"><a href="#contact">Contact</a></li>
         </ul>
     </div>
     <div class="mobile-nav">
         <mat-icon class="open-icon" *ngIf="!menuVisible" (click)="toggleMenu()">menu</mat-icon>
         <mat-icon class="close-icon" *ngIf="menuVisible" (click)="toggleMenu()">close</mat-icon>
-        <ul class="mobile-nav-elements" *ngIf="menuVisible" [@slideDown]="menuVisible ? 'visible' : 'hidden'">
+        <ul class="mobile-nav-elements" *ngIf="menuVisible">
             <li class="mobile-nav-element"><a href="#">Home</a> </li>
             <li class="mobile-nav-element"> <a href="">My Cv</a> </li>
             <li class="mobile-nav-element"><a href="">Contact</a> </li>

@@ -1,13 +1,14 @@
 <div class="contact-form-wrapper" id='contact'>
     <div class="contact-form-bgc box-shadow">
         <div class="left-column">
-            <h2>Let's Get in Touch!</h2>
-            <p> If you're seeking expertise in creating polished, user-friendly websites, I'm here to help. Interested
+            <h2 [appFadeInOnScroll]="'left'">Let's Get in Touch!</h2>
+            <p [appFadeInOnScroll]="'left'"> If you're seeking expertise in creating polished, user-friendly websites,
+                I'm here to help. Interested
                 in my services? Drop me a line with your project details, and let's make digital excellence happen.</p>
         </div>
         <div class="right-column">
             <form *ngIf="!isSubmit" [formGroup]="contactForm" class="form-group">
-                <div class="control-wrapper">
+                <div class="control-wrapper" [appFadeInOnScroll]="'up'">
                     <div class="inputBox"
                         [class.error]="contactForm.get('name')?.invalid && contactForm.get('name')?.touched">
                         <input formControlName="name" id="name" type="text" required>
@@ -19,7 +20,7 @@
                         Name is required.
                     </div>
                 </div>
-                <div class="control-wrapper">
+                <div class="control-wrapper" [appFadeInOnScroll]="'right'">
 
                     <div class="inputBox"
                         [class.error]="contactForm.get('email')?.invalid && contactForm.get('email')?.touched">
@@ -32,7 +33,7 @@
                         A valid email is required.
                     </div>
                 </div>
-                <div class="control-wrapper">
+                <div class="control-wrapper" [appFadeInOnScroll]="'down'">
 
                     <div class="inputBox"
                         [class.error]="contactForm.get('message')?.invalid && contactForm.get('message')?.touched">

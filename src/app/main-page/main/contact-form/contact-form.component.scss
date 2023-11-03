@@ -4,6 +4,8 @@
     margin: auto;
 
     .contact-form-bgc {
+        overflow: hidden;
+
         padding: 5vh 7vw;
         display: flex;
         margin: auto;
@@ -157,7 +159,6 @@
             align-items: flex-start;
             flex-direction: column;
 
-            /* assign left column to left area */
             h2 {
                 position: relative;
                 font-size: 2.5rem;
@@ -273,7 +274,6 @@
 @media (max-width: 1024px) {
     .contact-form-wrapper .contact-form-bgc {
         grid-template-columns: 1fr;
-        /* Make it a single column layout */
         grid-template-areas:
             "left"
             "right"
@@ -284,31 +284,23 @@
     .contact-form-wrapper .contact-form-bgc .left-column,
     .contact-form-wrapper .contact-form-bgc .right-column {
         padding-right: 0;
-        /* Remove padding that was previously added */
     }
 
     .contact-form-wrapper .contact-form-bgc .buttons-section {
         padding: 20px 0;
-        /* Adjust padding for the button section if needed */
         flex-direction: column;
-        /* Stack the buttons vertically */
     }
 
     .contact-form-wrapper .contact-form-bgc .buttons-section .custom-button {
         padding: 8px 35px;
-        /* Adjust the button padding if needed */
         margin-bottom: 10px;
-        /* Add some space between the stacked buttons */
     }
 
-    /* Optionally, adjust the size of the text and other elements inside your form as appropriate for smaller screens */
     .contact-form-wrapper .contact-form-bgc .left-column h2 {
         font-size: 2rem;
-        /* Adjust the font size for smaller screens */
     }
 
     .contact-form-wrapper .contact-form-bgc .left-column p {
         font-size: 0.9rem;
-        /* Adjust the paragraph font size if necessary */
     }
 }

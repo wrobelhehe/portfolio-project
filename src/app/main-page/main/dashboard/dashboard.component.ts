@@ -34,6 +34,13 @@ export class DashboardComponent {
     return {};
   }
 
+  getCombinedStyles(index: number) {
+    const stylesFromGetStyles = this.getStyles(index);
+    const stylesFromGetGridStyles = this.getGridStyles(index);
+
+    return { ...stylesFromGetStyles, ...stylesFromGetGridStyles };
+  }
+
   openDialog(preview: Preview): void {
     this.dialog.open(DialogComponent, {
       data: preview,

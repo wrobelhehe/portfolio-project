@@ -12,6 +12,8 @@ app-dashboard {
         gap: 3rem;
         border-radius: 20px;
         padding: 5vh 7vw;
+        overflow: hidden;
+
     }
 
     .border-radius {
@@ -56,7 +58,7 @@ app-dashboard {
     }
 
     .animated {
-        animation-name: fadeInUp;
+        animation-name: fadeInUpper;
         animation-duration: 0.5s;
         animation-fill-mode: forwards;
         opacity: 0;
@@ -71,7 +73,7 @@ app-dashboard {
         cursor: pointer;
     }
 
-    @keyframes fadeInUp {
+    @keyframes fadeInUpper {
         from {
             opacity: 0;
             transform: translateY(20px);

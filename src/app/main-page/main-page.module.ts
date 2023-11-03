@@ -14,6 +14,7 @@ import { MidNavComponent } from './mid-nav/mid-nav.component';
 import { ContactFormComponent } from './main/contact-form/contact-form.component';
 import { FooterComponent } from './main/footer/footer.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FadeInOnScrollDirective } from './main/contact-form/fade-in.directive';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MidNavComponent,
     ContactFormComponent,
     FooterComponent,
+
+    FadeInOnScrollDirective
 
 
 

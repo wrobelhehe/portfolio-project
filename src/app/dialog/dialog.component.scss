@@ -191,6 +191,7 @@
     h1,
     h2,
     h3,
+    h4,
     p {
         font-size: 90%;
     }
@@ -199,6 +200,18 @@
         padding: 0 10px;
         border-left: none;
         text-align: center;
+
+        .technologies {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            h4 {
+                padding: 0;
+                margin: 5px 0
+            }
+        }
     }
 
     .mac-buttons>span {
@@ -227,6 +240,7 @@
     h1,
     h2,
     h3,
+    h4,
     p {
         font-size: 80%;
     }
@@ -257,6 +271,7 @@
     h1,
     h2,
     h3,
+    h4,
     p {
         font-size: 70%;
     }

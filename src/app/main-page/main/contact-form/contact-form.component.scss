@@ -2,13 +2,313 @@
     padding: 0 5% 7% 5%;
     width: 80vw;
     margin: auto;
+
+    .contact-form-bgc {
+        padding: 5vh 7vw;
+        display: flex;
+        margin: auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        border-radius: 20px;
+
+        grid-template-areas:
+            "left right"
+            "button button";
+        gap: 20px;
+
+        .right-column {
+            grid-area: right;
+
+            .form-group {
+                display: flex;
+                justify-content: space-evenly;
+                align-items: flex-end;
+                flex-direction: column;
+                height: 100%;
+                width: 100%;
+
+
+                .error-message {
+                    color: #770b05;
+                    font-size: 0.8em;
+                    margin-top: 10px;
+                    font-weight: bold;
+                }
+
+                &.error input,
+                &.error textarea {
+                    border-color: #770b05;
+                    box-shadow: 0 0 8px rgba(255, 0, 0, .6);
+                }
+
+                .control-wrapper {
+                    height: 90px;
+                    width: 100%;
+
+                    .inputBox {
+                        width: 100%;
+                        position: relative;
+                        box-shadow: 0 0 20px -5px rgb(134, 135, 150);
+                        border-radius: 5px;
+                        transition: border 0.5s;
+                    }
+
+                    .inputBox input,
+                    .inputBox textarea {
+                        box-sizing: border-box;
+                        width: 100%;
+                        padding: 10px;
+                        border: 1px solid transparent;
+                        background: transparent;
+                        border-radius: 5px;
+                        outline: none;
+                        color: white;
+                        font-size: 1em;
+                        transition: 0.5s;
+                    }
+
+                    .inputBox textarea {
+                        height: 100px;
+                    }
+
+                    .inputBox span {
+                        font-weight: bold;
+                        position: absolute;
+                        left: 0;
+                        padding: 10px;
+                        pointer-events: none;
+                        font-size: 1em;
+                        color: rgb(134, 135, 150);
+                        border-radius: 5px;
+                        text-transform: uppercase;
+                        transition: transform 0.5s, font-size 0.5s, background-color 0.5s, color 0.5s;
+                    }
+
+                    .inputBox input:valid,
+                    .inputBox input:focus,
+                    .inputBox textarea:valid,
+                    .inputBox textarea:focus {
+                        box-shadow: none;
+                        border: 1px solid white;
+                    }
+
+
+                    .inputBox input:valid~span,
+                    .inputBox input:focus~span,
+                    .inputBox textarea:valid~span,
+                    .inputBox textarea:focus~span,
+                    .inputBox input:invalid:focus~span,
+                    .inputBox textarea:invalid:focus~span {
+                        transform: translateX(10px) translateY(-7px);
+                        font-size: 0.65em;
+                        padding: 2px 10px;
+                        background: #fff;
+                        border-radius: 2px;
+                        color: #000212;
+                        letter-spacing: 0.2em;
+                    }
+
+                    .inputBox.error input:invalid:not(:focus)~span,
+                    .inputBox.error textarea:invalid:not(:focus)~span {
+                        transform: translateX(10px) translateY(-7px);
+                        font-size: 0.65em;
+                        padding: 2px 10px;
+                        background: #770b05;
+                        color: white;
+                        border-radius: 2px;
+                        letter-spacing: 0.2em;
+                    }
+
+                    .inputBox.error input:invalid:focus~span,
+                    .inputBox.error textarea:invalid:focus~span,
+                    .inputBox.error input:invalid~span,
+                    .inputBox.error textarea:invalid~span,
+                    .inputBox.error input:invalid:not(:focus)~span,
+                    .inputBox.error textarea:invalid:not(:focus)~span {
+                        background: #770b05;
+                        color: white;
+                    }
+
+                    .inputBox input:valid~span,
+                    .inputBox textarea:valid~span {
+                        background: #fff;
+                        color: #000212;
+                    }
+
+
+                    .inputBox input.ng-invalid.ng-touched,
+                    .inputBox textarea.ng-invalid.ng-touched {
+                        border: 1px solid #770b05;
+                        border-radius: 5px;
+                    }
+
+                }
+            }
+        }
+
+
+
+        .left-column {
+            grid-area: left;
+            padding-right: 30px;
+
+            display: flex;
+            justify-content: space-evenly;
+            align-items: flex-start;
+            flex-direction: column;
+
+            /* assign left column to left area */
+            h2 {
+                position: relative;
+                font-size: 2.5rem;
+                color: #fff;
+                padding-bottom: 10px;
+            }
+
+            h2:after {
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                height: 3px;
+                width: 100%;
+                background: #fff;
+                transform: scaleX(0);
+                transform-origin: right;
+                transition: transform 0.3s ease-out;
+            }
+
+            h2:hover:after {
+                transform: scaleX(1);
+                transform-origin: left;
+            }
+
+            p {
+                font-size: 1rem;
+                line-height: 1.6;
+                color: white;
+            }
+        }
+
+        .buttons-section {
+            grid-area: button;
+            /* span across both columns */
+            justify-content: center;
+            display: flex;
+            justify-self: stretch;
+            /* for full width */
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-direction: row;
+            padding: 40px 0px 0px 0px;
+
+            .custom-button {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: white;
+                font-weight: 700;
+                color: #00000b;
+                border-radius: 25px;
+                padding: 8px 70px;
+                font-family: 'Comfortaa', sans-serif;
+                cursor: pointer;
+                transition: all 0.4s ease;
+                overflow: hidden;
+                font-size: 16px;
+                border: none;
+                position: relative;
+                outline: none;
+                width: max-content;
+
+                .icon-wrapper {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 40px;
+                    height: 40px;
+                    transition: all 0.4s ease;
+                    z-index: 2;
+                }
+
+            }
+
+
+            .custom-button mat-icon {
+                height: 24px;
+                width: 24px;
+            }
+
+            .custom-button span {
+                white-space: nowrap;
+                transform: translateX(150%);
+                transition: all 0.4s ease;
+                opacity: 0;
+                position: absolute;
+                left: calc(100% + 10px);
+                z-index: 1;
+            }
+
+            .custom-button:hover .icon-wrapper {
+                transform: translateX(-160%);
+            }
+
+            .custom-button:hover span {
+                transform: translateX(0);
+                opacity: 1;
+                left: calc(25%);
+            }
+        }
+    }
 }
 
-.contact-form-bgc {
-    padding: 5vh 7vw;
 
-}
 
 .box-shadow {
     box-shadow: 0 0 20px -5px rgba(66, 68, 90, 1);
+}
+
+@media (max-width: 1024px) {
+    .contact-form-wrapper .contact-form-bgc {
+        grid-template-columns: 1fr;
+        /* Make it a single column layout */
+        grid-template-areas:
+            "left"
+            "right"
+            "button";
+
+    }
+
+    .contact-form-wrapper .contact-form-bgc .left-column,
+    .contact-form-wrapper .contact-form-bgc .right-column {
+        padding-right: 0;
+        /* Remove padding that was previously added */
+    }
+
+    .contact-form-wrapper .contact-form-bgc .buttons-section {
+        padding: 20px 0;
+        /* Adjust padding for the button section if needed */
+        flex-direction: column;
+        /* Stack the buttons vertically */
+    }
+
+    .contact-form-wrapper .contact-form-bgc .buttons-section .custom-button {
+        padding: 8px 35px;
+        /* Adjust the button padding if needed */
+        margin-bottom: 10px;
+        /* Add some space between the stacked buttons */
+    }
+
+    /* Optionally, adjust the size of the text and other elements inside your form as appropriate for smaller screens */
+    .contact-form-wrapper .contact-form-bgc .left-column h2 {
+        font-size: 2rem;
+        /* Adjust the font size for smaller screens */
+    }
+
+    .contact-form-wrapper .contact-form-bgc .left-column p {
+        font-size: 0.9rem;
+        /* Adjust the paragraph font size if necessary */
+    }
 }

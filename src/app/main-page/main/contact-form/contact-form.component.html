@@ -1,5 +1,62 @@
 <div class="contact-form-wrapper" id='contact'>
     <div class="contact-form-bgc box-shadow">
+        <div class="left-column">
+            <h2>Let's Get in Touch!</h2>
+            <p> If you're seeking expertise in creating polished, user-friendly websites, I'm here to help. Interested
+                in my services? Drop me a line with your project details, and let's make digital excellence happen.</p>
+        </div>
+        <div class="right-column">
+            <form *ngIf="!isSubmit" [formGroup]="contactForm" class="form-group">
+                <div class="control-wrapper">
+                    <div class="inputBox"
+                        [class.error]="contactForm.get('name')?.invalid && contactForm.get('name')?.touched">
+                        <input formControlName="name" id="name" type="text" required>
+                        <span>Name</span>
 
+                    </div>
+                    <div *ngIf="contactForm.get('name')?.invalid && contactForm.get('name')?.touched"
+                        class="error-message">
+                        Name is required.
+                    </div>
+                </div>
+                <div class="control-wrapper">
+
+                    <div class="inputBox"
+                        [class.error]="contactForm.get('email')?.invalid && contactForm.get('email')?.touched">
+                        <input formControlName="email" id="email" type="email" required>
+                        <span>Email</span>
+
+                    </div>
+                    <div *ngIf="contactForm.get('email')?.invalid && contactForm.get('email')?.touched"
+                        class="error-message">
+                        A valid email is required.
+                    </div>
+                </div>
+                <div class="control-wrapper">
+
+                    <div class="inputBox"
+                        [class.error]="contactForm.get('message')?.invalid && contactForm.get('message')?.touched">
+                        <textarea formControlName="message" id="message" required maxlength="500"></textarea>
+                        <span>Message</span>
+
+                    </div>
+                    <div *ngIf="contactForm.get('message')?.invalid && contactForm.get('message')?.touched"
+                        class="error-message">
+                        Message is required.
+                    </div>
+                </div>
+
+
+            </form>
+        </div>
+        <h1 *ngIf="isSubmit" class="submit-message">{{ submitMessage }}</h1>
+        <div class="buttons-section" *ngIf="contactForm.valid" @fadeInOut>
+            <button class="custom-button" (click)="submitEmail(contactForm.value)">
+                <div class="icon-wrapper">
+                    <mat-icon>send</mat-icon>
+                </div>
+                <span>Send message</span>
+            </button>
+        </div>
     </div>
 </div>

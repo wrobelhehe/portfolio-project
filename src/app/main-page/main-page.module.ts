@@ -13,6 +13,7 @@ import { DialogComponent } from '../dialog/dialog.component';
 import { MidNavComponent } from './mid-nav/mid-nav.component';
 import { ContactFormComponent } from './main/contact-form/contact-form.component';
 import { FooterComponent } from './main/footer/footer.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,8 @@ import { FooterComponent } from './main/footer/footer.component';
     NgScrollbarModule,
     NgxSpinnerModule,
     MaterialModule,
+    ReactiveFormsModule,
+    FormsModule
 
 
 

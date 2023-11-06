@@ -14,7 +14,9 @@ import { MidNavComponent } from './mid-nav/mid-nav.component';
 import { ContactFormComponent } from './main/contact-form/contact-form.component';
 import { FooterComponent } from './main/footer/footer.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { FadeInOnScrollDirective } from './main/contact-form/fade-in.directive';
+import { FadeInOnScrollDirective } from '../common/directives/fade-in.directive';
+import { CvComponent } from './main/cv/cv.component';
+import { ScrollProgressDirective } from '../common/directives/scroll-progress';
 
 @NgModule({
   declarations: [
@@ -26,8 +28,9 @@ import { FadeInOnScrollDirective } from './main/contact-form/fade-in.directive';
     MidNavComponent,
     ContactFormComponent,
     FooterComponent,
-
-    FadeInOnScrollDirective
+    ScrollProgressDirective,
+    FadeInOnScrollDirective,
+    CvComponent
 
 
 

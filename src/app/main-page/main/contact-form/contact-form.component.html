@@ -1,14 +1,14 @@
 <div class="contact-form-wrapper" id='contact'>
-    <div class="contact-form-bgc box-shadow">
-        <div class="left-column">
+    <div class="contact-form-bgc box-shadow" [ngClass]="{'contact-form-submitted': isSubmit}">
+        <div class="left-column" *ngIf=" !isSubmit">
             <h2 [appFadeInOnScroll]="'left'">Let's Get in Touch!</h2>
-            <p [appFadeInOnScroll]="'left'"> If you're seeking expertise in creating polished, user-friendly websites,
+            <p [appFadeInOnScroll]="'right'"> If you're seeking expertise in creating polished, user-friendly websites,
                 I'm here to help. Interested
-                in my services? Drop me a line with your project details, and let's make digital excellence happen.</p>
+                in my services? Drop me a line with your projct details, and let's make digital excellence happen.</p>
         </div>
-        <div class="right-column">
-            <form *ngIf="!isSubmit" [formGroup]="contactForm" class="form-group">
-                <div class="control-wrapper" [appFadeInOnScroll]="'up'">
+        <div class="right-column" *ngIf=" !isSubmit">
+            <form [formGroup]="contactForm" class="form-group">
+                <div class="control-wrapper" [appFadeInOnScroll]="'left'">
                     <div class="inputBox"
                         [class.error]="contactForm.get('name')?.invalid && contactForm.get('name')?.touched">
                         <input formControlName="name" id="name" type="text" required>
@@ -20,7 +20,7 @@
                         Name is required.
                     </div>
                 </div>
-                <div class="control-wrapper" [appFadeInOnScroll]="'right'">
+                <div class="control-wrapper" [appFadeInOnScroll]="'down'">
 
                     <div class="inputBox"
                         [class.error]="contactForm.get('email')?.invalid && contactForm.get('email')?.touched">
@@ -33,7 +33,7 @@
                         A valid email is required.
                     </div>
                 </div>
-                <div class="control-wrapper" [appFadeInOnScroll]="'down'">
+                <div class="control-wrapper" [appFadeInOnScroll]="'right'">
 
                     <div class="inputBox"
                         [class.error]="contactForm.get('message')?.invalid && contactForm.get('message')?.touched">
@@ -50,14 +50,18 @@
 
             </form>
         </div>
-        <h1 *ngIf="isSubmit" class="submit-message">{{ submitMessage }}</h1>
-        <div class="buttons-section" *ngIf="contactForm.valid" @fadeInOut>
+
+        <div class="buttons-section" *ngIf="contactForm.valid && !isSubmit" [appFadeInOnScroll]="'down'">
             <button class="custom-button" (click)="submitEmail(contactForm.value)">
                 <div class="icon-wrapper">
                     <mat-icon>send</mat-icon>
                 </div>
                 <span>Send message</span>
             </button>
+        </div>
+        <div @fadeInOut class="after-submit-section" *ngIf="isSubmit">
+            <h1 *ngIf="isSubmit" [appFadeInOnScroll]="'left'">
+                {{ submitMessage }} </h1>
         </div>
     </div>
 </div>

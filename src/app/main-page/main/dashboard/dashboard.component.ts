@@ -11,16 +11,9 @@ import { MatDialog } from '@angular/material/dialog';
 export class DashboardComponent {
   previews: Preview[] = MOCK_PREVIEWS;
 
+  animationDirections: ('right' | 'left')[] = ['right', 'left']
+
   constructor(public dialog: MatDialog) { }
-
-  getStyles(index: number) {
-    const baseStyles: any = {
-      'animation-delay': `${index * 0.1}s`
-    };
-
-
-    return baseStyles;
-  }
 
 
   getGridStyles(index: number) {
@@ -32,13 +25,6 @@ export class DashboardComponent {
     }
 
     return {};
-  }
-
-  getCombinedStyles(index: number) {
-    const stylesFromGetStyles = this.getStyles(index);
-    const stylesFromGetGridStyles = this.getGridStyles(index);
-
-    return { ...stylesFromGetStyles, ...stylesFromGetGridStyles };
   }
 
   openDialog(preview: Preview): void {

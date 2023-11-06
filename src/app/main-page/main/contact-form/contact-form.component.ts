@@ -21,8 +21,9 @@ import { trigger, transition, style, animate } from '@angular/animations';
   ]
 })
 export class ContactFormComponent {
-  submitMessage: string = '';
+  submitMessage: string = 'Email sent successfully!';
   isSubmit: boolean = false;
+  spinning = false
   contactForm: FormGroup;
 
   constructor(private formBuilder: FormBuilder, private firestore: AngularFirestore) {
@@ -39,11 +40,14 @@ export class ContactFormComponent {
     if (this.contactForm.valid) {
       this.firestore.collection('emails').add(value).then(() => {
         this.submitMessage = 'Email sent successfully!';
-        this.isSubmit = true;
+        this.spinning = false
+        this.isSubmit = true
         setTimeout(() => this.isSubmit = false, 5000);
       }).catch(error => {
         console.error('Error sending message: ', error);
       });
+
+
     }
   }
 }

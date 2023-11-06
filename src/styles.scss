@@ -130,17 +130,6 @@ app-root {
     width: 100%;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
-@import './app/app.component.scss';
-@import './app/main-page/sky-background/sky-background.component.scss';
-@import './app/main-page/main/main.component.scss';
-@import './app/main-page/main/navigation/navigation.component.scss';
-@import './app/dialog/dialog.component.scss';
-@import './app/main-page/mid-nav/mid-nav.component.scss';
-@import './app/main-page//main/contact-form/contact-form.component.scss';
-@import './app/main-page/main/dashboard/dashboard.component.scss';
-@import './app/main-page/main/footer/footer.component.scss';
-
 * {
     scrollbar-width: thin;
     scrollbar-color: white #010001;
@@ -203,6 +192,42 @@ app-root {
     }
 }
 
+.skill-progress-fill {
+    transition: width 6s ease-in-out;
+}
+
+/* Dodaj tę klasę w swoim pliku CSS */
+@keyframes pulse {
+    0% {
+        height: 100%;
+        // width: 100%;
+
+        box-shadow: none;
+    }
+
+    50% {
+        height: 150%;
+        width: 101%;
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.75);
+        background-color: #83fc83;
+
+        /* dodaje lekkie podświetlenie */
+    }
+
+    100% {
+        height: 100%;
+        // width: 100%;
+
+        box-shadow: none;
+    }
+}
+
+.progress-pulse-animation {
+    animation: pulse 1s ease-in-out forwards;
+    /* Ustaw animację na 1 sekundę */
+}
+
+
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -226,3 +251,15 @@ app-root {
         transform: translateY(0);
     }
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
+@import './app/app.component.scss';
+@import './app/main-page/sky-background/sky-background.component.scss';
+@import './app/main-page/main/main.component.scss';
+@import './app/main-page/main/navigation/navigation.component.scss';
+@import './app/dialog/dialog.component.scss';
+@import './app/main-page/mid-nav/mid-nav.component.scss';
+@import './app/main-page//main/contact-form/contact-form.component.scss';
+@import './app/main-page/main/dashboard/dashboard.component.scss';
+@import './app/main-page/main/footer/footer.component.scss';
+@import './app/main-page/main/cv/cv.component.scss';

@@ -11,8 +11,9 @@ app-dashboard {
         grid-template-rows: repeat(3, 1fr);
         gap: 3rem;
         border-radius: 20px;
-        padding: 5vh 7vw;
+        padding: 5vh 5vw;
         overflow: hidden;
+        min-height: 80vh;
 
     }
 
@@ -55,6 +56,8 @@ app-dashboard {
         position: relative;
         width: 100%;
         height: 100%;
+        transition: transform 0.3s ease !important;
+
     }
 
     .animated {
@@ -65,11 +68,11 @@ app-dashboard {
     }
 
     .preview-element {
-        transition: transform 0.3s ease;
+        transition: transform 0.3s ease !important;
     }
 
-    .preview-element:hover {
-        transform: scale(1.1);
+    .inner-container:hover {
+        transform: scale(1.1) !important;
         cursor: pointer;
     }
 

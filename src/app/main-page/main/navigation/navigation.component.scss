@@ -63,9 +63,14 @@
 
             .desktop-nav-element {
                 font-weight: bold;
-                font-size: 1.3em; // Domyślny rozmiar czcionki (jako przykład)
+                font-size: 1.1em; // Domyślny rozmiar czcionki (jako przykład)
                 transition: font-size 0.3s ease-in-out; // Dodaj animację dla rozmiaru czcionki
             }
+
+            a:hover {
+                color: rgb(134, 135, 150);
+            }
+
         }
     }
 
@@ -101,7 +106,7 @@
                 width: 100%;
 
                 position: absolute;
-                top: 9vh;
+                top: 7.5vh;
                 left: 0;
                 z-index: 100;
                 background-color: rgba(0, 0, 0, 0.9);
@@ -117,6 +122,10 @@
                     letter-spacing: 2px;
                     transform: scale(1);
                     transition: transform 0.3s ease-in-out;
+                }
+
+                a:hover {
+                    color: rgb(134, 135, 150);
                 }
 
                 .mobile-nav-element:hover {

@@ -14,3 +14,4 @@ export interface Preview {
     technologies: string[]
     buttons?: Button[]
 }
+

@@ -1,9 +1,9 @@
 <div class="navigation-wrapper" [ngClass]="menuClass">
-    <div class="logo-wrapper"><a href="#"><img src="../../../assets/img/w-logo.png" alt=""></a></div>
+    <div class="logo-wrapper"><a href="/"><img src="../../../assets/img/w-logo.png" alt=""></a></div>
     <div class="desktop-nav">
         <ul class="desktop-nav-elements">
-            <li class="desktop-nav-element"><a href="#home">Home</a> </li>
-            <li class="desktop-nav-element"> <a href="#cv">My Cv</a> </li>
+            <li class="desktop-nav-element"><a href="/">Home</a> </li>
+            <li class="desktop-nav-element"> <a href="#cv">My Resume</a> </li>
             <li class="desktop-nav-element"><a href="#contact">Contact</a></li>
         </ul>
     </div>
@@ -12,7 +12,7 @@
         <mat-icon class="close-icon" *ngIf="menuVisible" (click)="toggleMenu()">close</mat-icon>
         <ul class="mobile-nav-elements" *ngIf="menuVisible">
             <li class="mobile-nav-element"><a href="#home">Home</a> </li>
-            <li class="mobile-nav-element"> <a href="#cv">My Cv</a> </li>
+            <li class="mobile-nav-element"> <a href="#cv">My Resume</a> </li>
             <li class="mobile-nav-element"><a href="#contact">Contact</a> </li>
         </ul>
     </div>

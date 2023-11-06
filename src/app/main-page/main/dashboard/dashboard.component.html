@@ -1,9 +1,9 @@
 <div class="dashboard-wrapper">
     <div class="dashboard-bgc box-shadow">
         <ng-container *ngFor="let preview of previews; let i = index">
-            <div [ngStyle]="getCombinedStyles(i)" class="preview-element border-radius box-shadow animated"
-                (click)="openDialog(preview)">
-                <div class="inner-container animated">
+            <div [ngStyle]="getGridStyles(i)" class="preview-element"
+                [appFadeInOnScroll]="animationDirections[i % animationDirections.length]" (click)="openDialog(preview)">
+                <div class="inner-container  border-radius box-shadow">
                     <img class="border-radius" [src]="preview.imageUrl" alt="">
                     <h4 class="overlay-text" [ngClass]="{'first-preview': i === 0}">{{preview.header}}</h4>
                 </div>

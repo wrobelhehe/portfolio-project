@@ -25,13 +25,14 @@
                 </div>
 
             </div>
-            <div class="education-section cv-section" *ngFor="let education of cvMock.education">
+            <div class="education-section cv-section">
                 <h2>Education</h2>
-
-                <h4>{{education.institution}}</h4>
-                <div class="degree margin-bottom-10px">{{education.degree}}
-                </div>
-                <div class="period margin-bottom-10px">{{education.period}}
+                <div class=" education-wrapper" *ngFor="let education of cvMock.education">
+                    <h4>{{education.institution}}</h4>
+                    <div class="degree margin-bottom-10px">{{education.degree}}
+                    </div>
+                    <div class="period margin-bottom-10px">{{education.period}}
+                    </div>
                 </div>
 
             </div>
@@ -45,7 +46,7 @@
                 </div>
             </div>
             <div class="interests-section cv-section">
-                <h1>Interests</h1>
+                <h2>Interests</h2>
                 <div class="margin-bottom-10px" *ngFor="let interest of cvMock.interests">
                     {{interest.name}}</div>
             </div>
@@ -86,5 +87,13 @@
                 </h6>
             </div>
         </div>
+    </div>
+    <div class="buttons-section" [appFadeInOnScroll]="'down'">
+        <button class="custom-button" (click)="downloadAndOpenPdf()">
+            <div class="icon-wrapper">
+                <mat-icon>download</mat-icon>
+            </div>
+            <span>Download resume</span>
+        </button>
     </div>
 </div>

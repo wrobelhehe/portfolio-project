@@ -16,9 +16,13 @@ export const MOCK_CV_DATA: CvData = {
         location: 'Cracow, Poland'
     },
     education: [{
-        institution: 'Politechnika Krakowska im. Tadeusza Kościuszki',
+        institution: 'Cracow University of Technology',
         degree: 'Applied computer science',
-        period: '2019 - 2023'
+        period: '2019 - 2023  Bachelor of Engineering'
+    }, {
+        institution: 'Cracow University of Economics',
+        degree: 'Applied computer science ',
+        period: '2023 - present Master degree'
     }],
     languages: [
         { language: 'English', level: 80 },

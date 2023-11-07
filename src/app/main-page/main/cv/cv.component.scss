@@ -38,6 +38,10 @@
 
 }
 
+h1 {
+    margin: 0 0 20px 0;
+}
+
 
 
 .name-section img {
@@ -126,6 +130,8 @@
     margin-bottom: 0;
 }
 
+
+
 .cv-section {
     padding: 20px 0 20px 0;
 
@@ -150,19 +156,23 @@
 }
 
 .contact-line mat-icon {
-    font-size: 1.2em;
+    // font-size: 1.2em;
     margin-right: 8px;
+    // width: 20px;
+    // height: 20px;
+
+    vertical-align: middle;
 
 }
 
 .contact-line img {
     width: 20px;
     margin-right: 8px;
+    vertical-align: middle;
+
 }
 
-.contact-line img {
-    vertical-align: middle;
-}
+
 
 .period {
     font-size: 0.8em;
@@ -185,6 +195,80 @@
     text-align: justify;
     /* Justify the text for a more formal appearance */
 
+}
+
+
+
+.buttons-section {
+
+    justify-content: center;
+    display: flex;
+    justify-self: stretch;
+    /* for full width */
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    padding: 0;
+    margin-top: 40px;
+
+    .custom-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: white;
+        font-weight: 700;
+        color: #00000b;
+        border-radius: 25px;
+        padding: 8px 70px;
+        font-family: 'Comfortaa', sans-serif;
+        cursor: pointer;
+        transition: all 0.4s ease;
+        overflow: hidden;
+        font-size: 16px;
+        border: none;
+        position: relative;
+        outline: none;
+        width: 250px;
+
+        .icon-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            transition: all 0.4s ease;
+            z-index: 2;
+        }
+
+    }
+
+
+    .custom-button mat-icon {
+        height: 24px;
+        width: 24px;
+    }
+
+    .custom-button span {
+        white-space: nowrap;
+        transform: translateX(150%);
+        transition: all 0.4s ease;
+        opacity: 0;
+        position: absolute;
+        left: calc(100% + 10px);
+        z-index: 1;
+    }
+
+    .custom-button:hover .icon-wrapper {
+        transform: translateX(-200%);
+    }
+
+    .custom-button:hover span {
+        transform: translateX(0);
+        opacity: 1;
+        left: calc(30%);
+    }
 }
 
 

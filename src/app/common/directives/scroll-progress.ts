@@ -29,7 +29,6 @@ export class ScrollProgressDirective {
             }
         } else {
             this.renderer.setStyle(this.el.nativeElement, 'width', '0%');
-            // Ensure to remove the animation class if the element is not in view
             this.renderer.setStyle(this.el.nativeElement, 'transition', 'width 2s ease-out');
             this.renderer.removeClass(this.el.nativeElement, 'progress-pulse-animation');
         }

@@ -1,5 +1,5 @@
 .cv-wrapper {
-    padding: 0 5% 7% 5%;
+    padding: 7% 5% 7% 5%;
     width: 80vw;
     margin: auto;
     overflow: hidden;
@@ -9,7 +9,6 @@
 .cv-bgc {
     overflow: hidden;
     min-height: 100vh;
-    // padding: 5vh 7vw;
     margin: auto;
     border-radius: 20px;
     display: flex;
@@ -18,7 +17,6 @@
 
 .left-sec {
     flex: 0 0 30%;
-    /* Do not grow, do not shrink, start at 30% of the parent container */
     background-color: transparent;
     padding: 5vh 20px 5vh 5vw;
     border-radius: 15px;
@@ -29,7 +27,6 @@
 
 .right-sec {
     flex: 1;
-    /* Will take the remaining space */
     background-color: white;
     padding: 5vh 5vw 5vh 20px;
     border-radius: 15px;
@@ -190,13 +187,8 @@ h1 {
 
 .agreement h6 {
     font-size: 0.5rem;
-    /* A smaller font size is typically used for legal text */
     line-height: 1.5;
-    /* Increase line height for better readability */
-    /* A darker shade for text for readability */
     text-align: justify;
-    /* Justify the text for a more formal appearance */
-
 }
 
 

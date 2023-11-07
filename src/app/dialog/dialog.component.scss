@@ -171,6 +171,16 @@
 
 @media (max-width: 1024px) {
 
+    .dialog-wrapper {
+        height: 50vh;
+        /* Set the height of the dialog */
+        overflow-y: auto;
+        /* Enable scrolling within the dialog */
+        background-color: #00000b;
+        /* Ensure the background color fills the dialog */
+        /* Other styles for positioning and width as needed */
+    }
+
     .left-section {
         border-bottom: 1px solid white;
         border-right: none;
@@ -186,6 +196,7 @@
     .column-sections {
         grid-template-columns: 1fr;
         grid-template-rows: auto auto;
+        max-width: 70vh;
     }
 
     h1,

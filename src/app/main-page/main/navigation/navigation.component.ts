@@ -1,5 +1,6 @@
 import { trigger, state, style, transition, animate } from '@angular/animations';
 import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navigation',
@@ -24,6 +25,9 @@ import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
 })
 export class NavigationComponent {
 
+
+
+
   menuVisible = false;
 
   get menuClass() {
@@ -32,6 +36,22 @@ export class NavigationComponent {
     };
   }
 
+
+  constructor(private router: Router) { }
+
+
+  navigateToSection(sectionId: string): void {
+    // Prevent the default anchor click behavior
+    event?.preventDefault();
+
+    // Find the element with the corresponding ID
+    const element = document.querySelector(sectionId);
+
+    // If the element exists, scroll to it
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
 
   toggleMenu() {
     this.menuVisible = !this.menuVisible;

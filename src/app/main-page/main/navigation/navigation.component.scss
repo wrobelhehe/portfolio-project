@@ -45,7 +45,7 @@
         justify-content: center;
         align-items: center;
         width: 50px;
-        transition: width 0.3s ease-in-out; // Move transition here
+        transition: width 0.3s ease-in-out;
 
         img {
             width: 100%;
@@ -63,8 +63,8 @@
 
             .desktop-nav-element {
                 font-weight: bold;
-                font-size: 1.1em; // Domyślny rozmiar czcionki (jako przykład)
-                transition: font-size 0.3s ease-in-out; // Dodaj animację dla rozmiaru czcionki
+                font-size: 1.1em;
+                transition: font-size 0.3s ease-in-out;
             }
 
             a:hover {

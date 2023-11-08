@@ -17,6 +17,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FadeInOnScrollDirective } from '../common/directives/fade-in.directive';
 import { CvComponent } from './main/cv/cv.component';
 import { ScrollProgressDirective } from '../common/directives/scroll-progress';
+import { ScrollToDirective } from '../common/directives/scroll-to.directive';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { ScrollProgressDirective } from '../common/directives/scroll-progress';
     FooterComponent,
     ScrollProgressDirective,
     FadeInOnScrollDirective,
-    CvComponent
+    CvComponent,
+    ScrollToDirective
 
 
 

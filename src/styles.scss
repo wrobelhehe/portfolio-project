@@ -104,10 +104,6 @@ body {
     color: white;
     scroll-behavior: smooth;
     background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(0, 4, 36, 1) 33%, rgba(34, 2, 40, 1) 63%, rgba(0, 0, 0, 1) 100%, rgba(0, 32, 16, 1) 100%);
-    // max-width: 100vw;
-    // overflow-x: hidden;
-
-
 }
 
 ul {
@@ -137,7 +133,6 @@ app-root {
 
 }
 
-/* styles.css or component.css */
 .in-viewport-left {
     animation: fadeInLeft 1s forwards;
 }
@@ -154,14 +149,12 @@ app-root {
     animation: fadeInDown 1s forwards;
 }
 
-/* Ukrywa element przed animacją */
 .hidden {
     visibility: hidden;
     opacity: 0;
     transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
 }
 
-/* Animuje element przy pojawieniu się w obszarze widocznym */
 .fade-in-animation {
     visibility: visible;
     opacity: 1;
@@ -196,11 +189,9 @@ app-root {
     transition: width 6s ease-in-out;
 }
 
-/* Dodaj tę klasę w swoim pliku CSS */
 @keyframes pulse {
     0% {
         height: 100%;
-        // width: 100%;
 
         box-shadow: none;
     }
@@ -211,12 +202,10 @@ app-root {
         box-shadow: 0 0 15px rgba(255, 255, 255, 0.75);
         background-color: #83fc83;
 
-        /* dodaje lekkie podświetlenie */
     }
 
     100% {
         height: 100%;
-        // width: 100%;
 
         box-shadow: none;
     }
@@ -224,8 +213,13 @@ app-root {
 
 .progress-pulse-animation {
     animation: pulse 1s ease-in-out forwards;
-    /* Ustaw animację na 1 sekundę */
 }
+
+.invisible {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
 
 
 @keyframes fadeInUp {

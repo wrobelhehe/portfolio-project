@@ -11,7 +11,7 @@ import { MatDialog } from '@angular/material/dialog';
 export class DashboardComponent {
   previews: Preview[] = MOCK_PREVIEWS;
 
-  animationDirections: ('right' | 'left')[] = ['left', 'right']
+  animationDirections: ('right' | 'left' | 'up' | 'down')[] = ['left', "down", 'right', "up"]
 
   constructor(public dialog: MatDialog) { }
 

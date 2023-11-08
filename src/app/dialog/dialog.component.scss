@@ -133,6 +133,11 @@
     width: max-content;
 }
 
+.custom-button:active {
+    transform: scale(0.8);
+}
+
+
 .icon-wrapper {
     display: flex;
     justify-content: center;
@@ -172,13 +177,19 @@
 @media (max-width: 1024px) {
 
     .dialog-wrapper {
-        height: 50vh;
-        /* Set the height of the dialog */
+        height: 70vh;
         overflow-y: auto;
-        /* Enable scrolling within the dialog */
         background-color: #00000b;
-        /* Ensure the background color fills the dialog */
-        /* Other styles for positioning and width as needed */
+    }
+
+
+    .buttons-section {
+        flex-direction: column;
+        margin-top: 0;
+    }
+
+    .custom-button {
+        margin-top: 10px;
     }
 
     .left-section {
@@ -230,20 +241,14 @@
         height: 18px;
     }
 
-    .custom-button {
-        padding: 8px 60px;
-        font-size: 14px;
-    }
+
 
     .icon-wrapper {
         width: 35px;
         height: 35px;
     }
 
-    .custom-button img {
-        height: 20px;
-        width: 20px;
-    }
+
 }
 
 @media (max-width: 768px) {
@@ -256,10 +261,7 @@
         font-size: 80%;
     }
 
-    .custom-button {
-        padding: 7px 50px;
-        font-size: 12px;
-    }
+
 
     .mac-buttons>span {
         width: 16px;
@@ -271,10 +273,7 @@
         height: 30px;
     }
 
-    .custom-button img {
-        height: 18px;
-        width: 18px;
-    }
+
 }
 
 @media (max-width: 480px) {
@@ -287,10 +286,7 @@
         font-size: 70%;
     }
 
-    .custom-button {
-        padding: 6px 40px;
-        font-size: 10px;
-    }
+
 
     .mac-buttons>span {
         width: 14px;
@@ -303,8 +299,5 @@
         margin: 0;
     }
 
-    .custom-button img {
-        height: 16px;
-        width: 16px;
-    }
+
 }

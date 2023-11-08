@@ -8,10 +8,12 @@ export class FadeInOnScrollDirective implements AfterViewInit {
     @Input() once: boolean = false;
     private hasAnimated = false;
 
-    constructor(private el: ElementRef, private renderer: Renderer2) { }
+    constructor(private el: ElementRef, private renderer: Renderer2) {
+        this.renderer.addClass(this.el.nativeElement, 'invisible');
+    }
 
     ngAfterViewInit() {
-        this.checkIfElementInView(); // Sprawdź przy inicjalizacji
+        this.checkIfElementInView();
     }
 
     @HostListener('window:scroll', [])
@@ -29,11 +31,13 @@ export class FadeInOnScrollDirective implements AfterViewInit {
         const elementInView = elementPosition.bottom > 0 && elementPosition.top <= viewportHeight;
 
         if (elementInView) {
+            this.renderer.removeClass(this.el.nativeElement, 'invisible');
             this.renderer.addClass(this.el.nativeElement, 'in-viewport-' + this.appFadeInOnScroll);
             if (this.once) {
                 this.hasAnimated = true;
             }
         } else if (!this.once) {
+            this.renderer.addClass(this.el.nativeElement, 'invisible');
             this.renderer.removeClass(this.el.nativeElement, 'in-viewport-' + this.appFadeInOnScroll);
         }
     }

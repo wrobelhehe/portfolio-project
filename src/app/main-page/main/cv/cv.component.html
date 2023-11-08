@@ -14,11 +14,11 @@
                         mail_outline</mat-icon><span>{{cvMock.contactInfo.email}}</span>
                 </div>
 
-                <div class="contact-line"><img src="../../../../assets/icons/icons8-linkedin.svg"
-                        alt=""><span>{{cvMock.contactInfo.linkedInUrl}}</span></div>
+                <div class="contact-line"><img src="../../../../assets/icons/icons8-linkedin.svg" alt=""><a
+                        [href]="cvMock.contactInfo.linkedInUrl">{{cvMock.contactInfo.linkedInUrl}}</a></div>
 
-                <div class="contact-line"><img src="../../../../assets/icons/icons8-github.svg"
-                        alt=""><span>{{cvMock.contactInfo.githubUrl}}</span></div>
+                <div class="contact-line"><img src="../../../../assets/icons/icons8-github.svg" alt=""><a
+                        [href]="cvMock.contactInfo.githubUrl">{{cvMock.contactInfo.githubUrl}}</a></div>
 
                 <div class="contact-line"> <mat-icon>
                         location_on</mat-icon><span>{{cvMock.contactInfo.location}}</span>

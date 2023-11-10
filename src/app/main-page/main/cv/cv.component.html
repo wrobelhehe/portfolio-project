@@ -2,87 +2,94 @@
     <div class="cv-bgc box-shadow">
         <div class="left-sec">
             <div class="name-section cv-section">
-                <img [src]="cvMock.profileImage.src" [alt]="cvMock.profileImage.alt">
-                <h1>{{cvMock.name}}</h1>
-                <h3>{{cvMock.title}}</h3>
+                <img [src]="cvMock.profileImage.src" [alt]="cvMock.profileImage.alt" [appFadeInOnScroll]="'down'"
+                    [once]="true">
+                <h1 [appFadeInOnScroll]="'down'" [once]="true">{{cvMock.name}}</h1>
+                <h3 [appFadeInOnScroll]="'down'" [once]="true">{{cvMock.title}}</h3>
             </div>
             <div class="info-section cv-section">
-                <h2>Contact info</h2>
-                <div class="contact-line"> <mat-icon>
+                <h2 [appFadeInOnScroll]="'down'" [once]="true">Contact info</h2>
+                <div [appFadeInOnScroll]="'down'" [once]="true" class="contact-line"> <mat-icon>
                         call</mat-icon><span>{{cvMock.contactInfo.phone}}</span></div>
-                <div class="contact-line"><mat-icon>
+                <div [appFadeInOnScroll]="'down'" [once]="true" class="contact-line"><mat-icon>
                         mail_outline</mat-icon><span>{{cvMock.contactInfo.email}}</span>
                 </div>
 
-                <div class="contact-line"><img src="../../../../assets/icons/icons8-linkedin.svg" alt=""><a
+                <div [appFadeInOnScroll]="'down'" [once]="true" class="contact-line"><img
+                        src="../../../../assets/icons/icons8-linkedin.svg" alt=""><a
                         [href]="cvMock.contactInfo.linkedInUrl">{{cvMock.contactInfo.linkedInUrl}}</a></div>
 
-                <div class="contact-line"><img src="../../../../assets/icons/icons8-github.svg" alt=""><a
+                <div [appFadeInOnScroll]="'down'" [once]="true" class="contact-line"><img
+                        src="../../../../assets/icons/icons8-github.svg" alt=""><a
                         [href]="cvMock.contactInfo.githubUrl">{{cvMock.contactInfo.githubUrl}}</a></div>
 
-                <div class="contact-line"> <mat-icon>
+                <div [appFadeInOnScroll]="'down'" [once]="true" class="contact-line"> <mat-icon>
                         location_on</mat-icon><span>{{cvMock.contactInfo.location}}</span>
                 </div>
 
             </div>
             <div class="education-section cv-section">
-                <h2>Education</h2>
+                <h2 [appFadeInOnScroll]="'down'" [once]="true">Education</h2>
                 <div class=" education-wrapper" *ngFor="let education of cvMock.education">
-                    <h4>{{education.institution}}</h4>
-                    <div class="degree margin-bottom-10px">{{education.degree}}
+                    <h4 [appFadeInOnScroll]="'down'" [once]="true">{{education.institution}}</h4>
+                    <div [appFadeInOnScroll]="'down'" [once]="true" class="degree margin-bottom-10px">
+                        {{education.degree}}
                     </div>
-                    <div class="period margin-bottom-10px">{{education.period}}
+                    <div [appFadeInOnScroll]="'down'" [once]="true" class="period margin-bottom-10px">
+                        {{education.period}}
                     </div>
                 </div>
 
             </div>
             <div class="languages-section cv-section">
                 <div class="lang margin-bottom-10px" *ngFor="let language of cvMock.languages">
-                    <span>{{language.language}}</span>
-                    <div class="language-progress">
+                    <span [appFadeInOnScroll]="'down'" [once]="true">{{language.language}}</span>
+                    <div [appFadeInOnScroll]="'down'" [once]="true" class="language-progress">
                         <div class="language-progress-fill" [ngStyle]="{'width': language.level + '%'}"
                             [appScrollProgress]="language.level"></div>
                     </div>
                 </div>
             </div>
             <div class="interests-section cv-section">
-                <h2>Interests</h2>
-                <div class="margin-bottom-10px" *ngFor="let interest of cvMock.interests">
+                <h2 [appFadeInOnScroll]="'down'" [once]="true">Interests</h2>
+                <div [appFadeInOnScroll]="'down'" [once]="true" class="margin-bottom-10px"
+                    *ngFor="let interest of cvMock.interests">
                     {{interest.name}}</div>
             </div>
 
         </div>
         <div class="right-sec">
             <div class="about-section cv-section ">
-                <h1>About me</h1>
-                <p>{{cvMock.about}}</p>
+                <h1 [appFadeInOnScroll]="'down'" [once]="true">About me</h1>
+                <p [appFadeInOnScroll]="'down'" [once]="true">{{cvMock.about}}</p>
             </div>
             <div class="experience-section cv-section" *ngFor="let experience of cvMock.experience">
-                <h1>Experience</h1>
+                <h1 [appFadeInOnScroll]="'down'" [once]="true">Experience</h1>
                 <div class="left">
-                    <div class="experience-year margin-bottom-10px">
+                    <div [appFadeInOnScroll]="'down'" [once]="true" class="experience-year margin-bottom-10px">
                         {{experience.period}}
                     </div>
-                    <div class="company">{{experience.company}}</div>
+                    <div [appFadeInOnScroll]="'down'" [once]="true" class="company">{{experience.company}}</div>
                 </div>
                 <div class="right">
-                    <h3>{{experience.role}}</h3>
-                    <span class="company-technologies" *ngFor="let technology of experience.technologies">{{technology +
+                    <h3 [appFadeInOnScroll]="'down'" [once]="true">{{experience.role}}</h3>
+                    <span [appFadeInOnScroll]="'down'" [once]="true" class="company-technologies"
+                        *ngFor="let technology of experience.technologies">{{technology +
                         ' '}}</span>
                 </div>
             </div>
             <div class="skills-section cv-section">
-                <h1>Professional Skills</h1>
+                <h1 [appFadeInOnScroll]="'down'" [once]="true">Professional Skills</h1>
                 <div class="skills margin-bottom-10px" *ngFor="let skill of cvMock.skills">
-                    <div class="left-skills">{{skill.name}}</div>
-                    <div class="skill-progress">
+                    <div [appFadeInOnScroll]="'down'" [once]="true" class="left-skills">{{skill.name}}</div>
+                    <div [appFadeInOnScroll]="'down'" [once]="true" class="skill-progress">
                         <div class="skill-progress-fill" [ngStyle]="{'width': skill.level + '%'}"
                             [appScrollProgress]="skill.level"></div>
                     </div>
                 </div>
             </div>
             <div class="agreement cv-section">
-                <h6>
+                <h6 [appFadeInOnScroll]="'down'" [once]="true">
                     {{cvMock.agreement}}
                 </h6>
             </div>
